@@ -38,13 +38,13 @@ pipeline {
         //     }
         // }
 
-    //     stage('Kubernetes deployment using Ansible') {
-    //         steps {
-    //             echo "Deploying application to Kubernetes using Ansible"
-    //             sleep 20
-    //         }
-    //     }
-    // }
+        // stage('Kubernetes deployment using Ansible') {
+        //     steps {
+        //         echo "Deploying application to Kubernetes using Ansible"
+        //         sleep 20
+        //     }
+        // }
+    }
 
     post {
         success {
