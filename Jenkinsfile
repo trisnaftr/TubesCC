@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Ganti dengan URL webhook yang kamu dapatkan
-        DISCORD_WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1322046015775441027/7nPfmPvkTF71LDTphxR0DhTuybJsuBbk8DpDzXSLDsE_Bx9TSVVBvT3oDteA5_i--pha'
+        DISCORD_WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1322050637017518213/l6YjlNyo7ejiDw3Kc4gLTbtZgtUo77v5P7t8fN_k0VIudkDO5Kk5Jdc3Vtw70c9l6Peo'
     }
 
     stages {
