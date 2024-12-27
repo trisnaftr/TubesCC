@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('no_telp');
             $table->string('alamat')->nullable();
-            $table->string('email')->unique()->after('name');
+            // $table->string('email')->unique()->after('name');
             $table->enum('gender', ['L', 'P']);
             $table->timestamps();
         });
