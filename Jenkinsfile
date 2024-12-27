@@ -25,38 +25,38 @@ pipeline {
         }
     }
 
-    post {
-        success {
-            script {
-                def embed = [
-                    title       : "Build Sukses :tada:",
-                    description : "Job: ${env.JOB_NAME}\nBuild: ${env.BUILD_NUMBER}\nStatus: SUCCESS",
-                    color       : 3066993
-                ]
-                def message = [embeds: [embed]]
-                httpRequest(
-                    url         : DISCORD_WEBHOOK_URL,
-                    httpMode    : 'POST',
-                    contentType : 'APPLICATION_JSON',
-                    requestBody : groovy.json.JsonOutput.toJson(message)
-                )
-            }
-        }
-        failure {
-            script {
-                def embed = [
-                    title       : "Build Gagal :x:",
-                    description : "Job: ${env.JOB_NAME}\nBuild: ${env.BUILD_NUMBER}\nStatus: FAILURE",
-                    color       : 15158332
-                ]
-                def message = [embeds: [embed]]
-                httpRequest(
-                    url         : DISCORD_WEBHOOK_URL,
-                    httpMode    : 'POST',
-                    contentType : 'APPLICATION_JSON',
-                    requestBody : groovy.json.JsonOutput.toJson(message)
-                )
-            }
-        }
-    }
+//     post {
+//         success {
+//             script {
+//                 def embed = [
+//                     title       : "Build Sukses :tada:",
+//                     // description : "Job: ${env.JOB_NAME}\nBuild: ${env.BUILD_NUMBER}\nStatus: SUCCESS",
+//                     color       : 3066993
+//                 ]
+//                 def message = [embeds: [embed]]
+//                 httpRequest(
+//                     url         : DISCORD_WEBHOOK_URL,
+//                     httpMode    : 'POST',
+//                     contentType : 'APPLICATION_JSON',
+//                     requestBody : groovy.json.JsonOutput.toJson(message)
+//                 )
+//             }
+//         }
+//         failure {
+//             script {
+//                 def embed = [
+//                     title       : "Build Gagal :x:",
+//                     description : "Job: ${env.JOB_NAME}\nBuild: ${env.BUILD_NUMBER}\nStatus: FAILURE",
+//                     color       : 15158332
+//                 ]
+//                 def message = [embeds: [embed]]
+//                 httpRequest(
+//                     url         : DISCORD_WEBHOOK_URL,
+//                     httpMode    : 'POST',
+//                     contentType : 'APPLICATION_JSON',
+//                     requestBody : groovy.json.JsonOutput.toJson(message)
+//                 )
+//             }
+//         }
+//     }
 }
